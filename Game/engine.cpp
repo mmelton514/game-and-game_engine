@@ -1,6 +1,8 @@
 #include <iostream>
 #include <array>
+#include <windows.h>
 
+#include "draw.h"
 #include "engine.h"
 
 using namespace std;
@@ -19,10 +21,10 @@ void Engine::update()
 
 void Engine::draw()
 {
-
+	
 }
 
-void Engine::start_game()
+void Engine::game_start()
 {
-
+	game_loop();
 }

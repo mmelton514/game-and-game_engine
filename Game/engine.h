@@ -2,6 +2,10 @@
 
 class Engine
 {
+public:
+
+	void game_start();
+
 private :
 
 	int game_loop();
@@ -9,6 +13,4 @@ private :
 	void update();
 
 	void draw();
-
-	void start_game();
 };
