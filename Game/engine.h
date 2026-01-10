@@ -1,4 +1,5 @@
 #pragma once
+#include <windows.h>
 
 class Engine
 {
@@ -6,11 +7,11 @@ public:
 
 	void game_start();
 
+	int game_loop(HWND hwnd);
+
 private :
 
-	int game_loop();
+	void engine_update();
 
-	void update();
-
-	void draw();
+	void engine_draw(HWND hwnd);
 };

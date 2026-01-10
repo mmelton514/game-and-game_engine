@@ -6,24 +6,24 @@
 
 using namespace std;
 
-int Engine::game_loop()
+int Engine::game_loop(HWND hwnd)
 {
-	update();
-	draw();
+	engine_update();
+	engine_draw(hwnd);
 	return 0;
 }
 
-void Engine::update()
+void Engine::engine_update()
 {
 
 }
 
-void Engine::draw()
+void Engine::engine_draw(HWND hwnd)
 {
-	
+	DrawFrame(hwnd);
 }
 
 void Engine::game_start()
 {
-	game_loop();
+	
 }

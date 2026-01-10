@@ -32,16 +32,6 @@ HWND InitWindow(HINSTANCE hInstance, int width, int height)
     return hwnd;
 }
 
-void RunMessageLoop()
-{
-    MSG msg = { 0 };
-    while (GetMessage(&msg, NULL, 0, 0))
-    {
-        TranslateMessage(&msg);
-        DispatchMessage(&msg);
-    }
-}
-
 LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
 {
     switch (msg)
