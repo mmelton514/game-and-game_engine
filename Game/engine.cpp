@@ -1,6 +1,5 @@
 #include <iostream>
 #include <array>
-#include <windows.h>
 
 #include "draw.h"
 #include "engine.h"
