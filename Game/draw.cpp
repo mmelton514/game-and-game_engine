@@ -6,7 +6,7 @@ static DWORD* pixels;
 static HBITMAP bitmap;
 static BITMAPINFO bmi;
 
-void PrepareScreen(HWND hwnd, int width, int height)
+void prepare_screen(HWND hwnd, int width, int height)
 {
     ZeroMemory(&bmi, sizeof(bmi));
     bmi.bmiHeader.biSize = sizeof(BITMAPINFOHEADER);
@@ -35,7 +35,7 @@ void PrepareScreen(HWND hwnd, int width, int height)
         pixels[i] = 0x0000AAFF;
 }
 
-void DrawFrame(HWND hwnd)
+void draw_frame(HWND hwnd)
 {
     PAINTSTRUCT ps;
     HDC hdc = BeginPaint(hwnd, &ps);

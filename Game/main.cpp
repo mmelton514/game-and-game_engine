@@ -9,7 +9,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE, PSTR, int)
 	int h = GetSystemMetrics(SM_CYSCREEN);
 
 	HWND hwnd = InitWindow(hInstance, w, h);
-	PrepareScreen(hwnd, w, h);
+	prepare_screen(hwnd, w, h);
 
 	e.game_start();
 

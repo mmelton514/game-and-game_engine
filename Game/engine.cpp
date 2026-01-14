@@ -20,7 +20,7 @@ void Engine::engine_update()
 
 void Engine::engine_draw(HWND hwnd)
 {
-	DrawFrame(hwnd);
+	draw_frame(hwnd);
 }
 
 void Engine::game_start()

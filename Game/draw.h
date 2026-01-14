@@ -1,5 +1,5 @@
 #pragma once
 #include <windows.h>
 
-void PrepareScreen(HWND hwnd, int width, int height);
-void DrawFrame(HWND hwnd);
+void prepare_screen(HWND hwnd, int width, int height);
+void draw_frame(HWND hwnd);

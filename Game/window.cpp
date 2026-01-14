@@ -37,7 +37,7 @@ LRESULT CALLBACK WindowProc(HWND hwnd, UINT msg, WPARAM wParam, LPARAM lParam)
     switch (msg)
     {
     case WM_PAINT:
-        DrawFrame(hwnd);   // ← calls into drawing module
+        draw_frame(hwnd);   // ← calls into drawing module
         return 0;
 
     case WM_DESTROY:
