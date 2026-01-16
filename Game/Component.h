@@ -10,12 +10,12 @@ class Component
 {
 public:
 
-	Component(string name_ = "default_name", bool update_ = false) : name(name_), update(update_) {}
-	void addListener(Component listener);
-	void updateListeners(string event_name);
-	Transform get_transform();
-	string get_name();
-	void handle_update(Component c, string event_name);
+	explicit Component(string const& name_ = "default_name", bool update_ = false) : name(name_), update(update_) {}
+	void addListener(Component const& listener);
+	void updateListeners(string const& event_name);
+	Transform get_transform() const;
+	string get_name() const;
+	void handle_update(Component const& c, string const& event_name);
 
 private:
 

@@ -1,44 +1,44 @@
 #include "GameObject.h"
 
-Transform GameObject::get_transform()
+Transform GameObject::get_transform() const
 {
 	return game_object_transform;
 }
 
-void GameObject::set_transform(Transform new_transform)
+void GameObject::set_transform(Transform const& new_transform)
 {
 	game_object_transform = new_transform;
 }
 
-void GameObject::add_component(Component& c)
+void GameObject::add_component(Component const& c)
 {
 	component_list.push_back(c);
 }
 
-GameObject GameObject::get_game_object(string name)
+GameObject GameObject::get_game_object(string const& name)
 {
 	GameObject g;
 	return g;
 }
 
-GameObject GameObject::get_game_objects(string name)
+GameObject GameObject::get_game_objects(string const& name)
 {
 	GameObject g;
 	return g;
 }
 
-GameObject GameObject::find(string name)
+GameObject GameObject::find(string const& name)
 {
 	return get_game_object(name);
 }
 
-Component GameObject::get_component(string name)
+Component GameObject::get_component(string const& name)
 {
-	for (int i = 0; i < component_list.size(); i++)
+	for (auto& cl : component_list)
 	{
-		if (component_list[i].get_name() == name)
+		if (cl.get_name() == name)
 		{
-			return component_list[i];
+			return cl;
 		}
 	}
 }

@@ -5,13 +5,13 @@ class Engine
 {
 public:
 
-	void game_start();
+	void game_start() const;
 
 	int game_loop(HWND hwnd);
 
 private :
 
-	void engine_update();
+	void engine_update() const;
 
-	void engine_draw(HWND hwnd);
+	void engine_draw(HWND hwnd) const;
 };

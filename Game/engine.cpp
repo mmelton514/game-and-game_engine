@@ -13,17 +13,17 @@ int Engine::game_loop(HWND hwnd)
 	return 0;
 }
 
-void Engine::engine_update()
+void Engine::engine_update() const
 {
 
 }
 
-void Engine::engine_draw(HWND hwnd)
+void Engine::engine_draw(HWND hwnd) const
 {
 	draw_frame(hwnd);
 }
 
-void Engine::game_start()
+void Engine::game_start() const
 {
 	
 }

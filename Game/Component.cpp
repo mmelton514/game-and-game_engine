@@ -1,33 +1,33 @@
 #include "Component.h"
 
-void Component::addListener(Component listener)
+void Component::addListener(Component const& listener)
 {
 	listener_vec.push_back(listener);
 }
 
-void Component::updateListeners(string event_name)
+void Component::updateListeners(string const& event_name)
 {
-	for (int i = 0; i < listener_vec.size(); i++)
+	for (auto& lv : listener_vec)
 	{
-		if (listener_vec[i].update)
+		if (lv.update)
 		{
-			listener_vec[i].handle_update(listener_vec[i], event_name);
+			lv.handle_update(lv, event_name);
 		}
 	}
 }
 
-void Component::handle_update(Component c, string event_name)
+void Component::handle_update(Component const& c, string const& event_name)
 {
 
 }
 
-Transform Component::get_transform()
+Transform Component::get_transform() const
 {
 	Transform t;
 	return t;
 }
 
-string Component::get_name()
+string Component::get_name() const
 {
 	return name;
 }

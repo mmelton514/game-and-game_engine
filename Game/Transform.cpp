@@ -1,6 +1,6 @@
 #include "Transform.h"
 
-Transform Transform::fromTo(double startX, double startY, double endX, double endY)
+Transform Transform::fromTo(double startX, double startY, double endX, double endY) const
 {
 	Transform t;
 
